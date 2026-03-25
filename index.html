@@ -1051,5 +1051,169 @@ Overrides all rules (avoid using).
 </ol>
 </div>
 
+  <div class="section">
+<h2>CSS Calculation Based Questions (Beginner → Advanced)</h2>
+<ol start="122">
+
+<li>
+Element width = 100px, padding = 20px, border = 10px (content-box). What is total width?
+<div class="answer">
+In content-box, padding and border are added outside.
+
+Calculation:
+100 + (20×2) + (10×2) = 100 + 40 + 20 = <strong>160px</strong>
+</div>
+</li>
+
+<li>
+Same case with box-sizing: border-box
+<div class="answer">
+In border-box, width includes padding and border.
+
+Total width remains: <strong>100px</strong>  
+Content area shrinks internally.
+</div>
+</li>
+
+<li>
+Width = 200px, margin = 20px. Total occupied width?
+<div class="answer">
+Margin adds outside space.
+
+200 + (20×2) = <strong>240px</strong>
+</div>
+</li>
+
+<li>
+Parent width = 500px, child width = 50%. What is child width?
+<div class="answer">
+50% of 500 = <strong>250px</strong>
+</div>
+</li>
+
+<li>
+font-size = 16px, element = 2em. Final size?
+<div class="answer">
+2 × 16 = <strong>32px</strong>
+</div>
+</li>
+
+<li>
+Root font-size = 16px, element = 2rem. Final size?
+<div class="answer">
+2 × 16 = <strong>32px</strong> (rem uses root)
+</div>
+</li>
+
+<li>
+Parent font-size = 20px, child = 2em. What is child size?
+<div class="answer">
+2 × 20 = <strong>40px</strong>
+</div>
+</li>
+
+<li>
+Width = calc(100% - 50px), parent = 500px. Final width?
+<div class="answer">
+100% of 500 = 500  
+500 - 50 = <strong>450px</strong>
+</div>
+</li>
+
+<li>
+Width = 100vw, viewport width = 1200px
+<div class="answer">
+100vw = <strong>1200px</strong>
+</div>
+</li>
+
+<li>
+Height = 50vh, viewport height = 800px
+<div class="answer">
+50% of 800 = <strong>400px</strong>
+</div>
+</li>
+
+<li>
+padding: 10px 20px; What is vertical and horizontal padding?
+<div class="answer">
+Top & Bottom = 10px  
+Left & Right = 20px
+</div>
+</li>
+
+<li>
+margin: 10px 20px 30px 40px; What is left margin?
+<div class="answer">
+Order: top right bottom left  
+Left = <strong>40px</strong>
+</div>
+</li>
+
+<li>
+Box width = 100px, border-box, padding = 20px. What is content width?
+<div class="answer">
+100 - (20×2) = <strong>60px</strong>
+</div>
+</li>
+
+<li>
+Grid container width = 600px, 3 columns (1fr each). Width per column?
+<div class="answer">
+600 / 3 = <strong>200px</strong>
+</div>
+</li>
+
+<li>
+Grid: repeat(3, 1fr) + gap: 30px. Container = 630px. Column width?
+<div class="answer">
+Total gap = 30×2 = 60px  
+Remaining = 630 - 60 = 570  
+Each column = 570 / 3 = <strong>190px</strong>
+</div>
+</li>
+
+<li>
+Flex container = 600px, 3 items flex:1. Each width?
+<div class="answer">
+600 / 3 = <strong>200px</strong>
+</div>
+</li>
+
+<li>
+Width = clamp(200px, 50%, 400px), parent = 1000px
+<div class="answer">
+50% = 500px  
+Clamp max = 400px  
+
+Final = <strong>400px</strong>
+</div>
+</li>
+
+<li>
+Width = clamp(200px, 30%, 400px), parent = 500px
+<div class="answer">
+30% = 150px → below min  
+So result = <strong>200px</strong>
+</div>
+</li>
+
+<li>
+Line-height = 1.5, font-size = 20px. Actual line height?
+<div class="answer">
+1.5 × 20 = <strong>30px</strong>
+</div>
+</li>
+
+<li>
+Element width = 300px, transform: scale(2). Visual width?
+<div class="answer">
+300 × 2 = <strong>600px</strong> (visual only, layout unchanged)
+</div>
+</li>
+
+</ol>
+</div>
+
 </body>
 </html>
