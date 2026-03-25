@@ -45,6 +45,38 @@
       display: block;
       margin-top: 5px;
     }
+
+    .links-container {
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(135deg, #eef3ff, #f9fbff);
+  border-radius: 12px;
+}
+
+.links-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.link-card {
+  background: white;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.link-card a {
+  text-decoration: none;
+  color: #4a6cf7;
+  font-weight: 500;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
   </style>
 </head>
 
@@ -55,11 +87,27 @@
   <p class="subtitle">2–3 Years Experience | ~40 Questions</p>
 </div>
 
-  <div>
-    <p>https://www.creative-tim.com/twcomponents/cheatsheet/tailwind-css-4</p>
-    <p>https://nerdcave.com/tailwind-cheat-sheet</p>
-    <p>tailwindcss + angular setup : https://tailwindcss.com/docs/installation/framework-guides/angular</p>
+ <div class="links-container">
+  <h2>Useful Resources</h2>
+
+  <div class="link-card">
+    <a href="https://www.creative-tim.com/twcomponents/cheatsheet/tailwind-css-4" target="_blank">
+      Tailwind CSS 4 Cheat Sheet (Creative Tim)
+    </a>
   </div>
+
+  <div class="link-card">
+    <a href="https://nerdcave.com/tailwind-cheat-sheet" target="_blank">
+      Tailwind Cheat Sheet (Nerdcave)
+    </a>
+  </div>
+
+  <div class="link-card">
+    <a href="https://tailwindcss.com/docs/installation/framework-guides/angular" target="_blank">
+      Tailwind + Angular Setup Guide
+    </a>
+  </div>
+</div>
 
 <div class="section">
 <h2>Core Fundamentals</h2>
