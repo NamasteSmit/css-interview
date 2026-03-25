@@ -327,5 +327,316 @@ transform: translateX(100px);
 </ol>
 </div>
 
+  <div class="section">
+<h2>5+ Years Experience (Advanced / Real-World / Scenario Based)</h2>
+<ol start="47">
+
+<li>
+How do you debug a complex CSS issue in production where styles are breaking randomly?
+<div class="answer">
+Step-by-step approach:
+<ul>
+<li>Use browser DevTools → inspect computed styles</li>
+<li>Check specificity conflicts</li>
+<li>Look for overwritten styles (strikethrough rules)</li>
+<li>Check loaded CSS order</li>
+<li>Look for dynamic class changes (JS)</li>
+</ul>
+
+<strong>Pro Tip:</strong> Use "Computed" tab to trace final applied styles.
+</div>
+</li>
+
+<li>
+Explain how browser rendering works (critical rendering path).
+<div class="answer">
+Steps:
+1. HTML → DOM  
+2. CSS → CSSOM  
+3. Combine → Render Tree  
+4. Layout → position calculation  
+5. Paint → pixels drawn  
+
+<strong>Key insight:</strong> CSS blocking delays rendering.
+</div>
+</li>
+
+<li>
+What causes layout thrashing and how to prevent it?
+<div class="answer">
+Repeated DOM read/write causes reflow.
+
+Example problem:
+<pre>
+element.style.width = "100px";
+element.offsetHeight;
+</pre>
+
+Fix:
+- Batch DOM updates  
+- Use requestAnimationFrame  
+</div>
+</li>
+
+<li>
+Difference between reflow and repaint?
+<div class="answer">
+Reflow → layout recalculation (expensive)  
+Repaint → visual update only  
+
+Example:
+- width change → reflow  
+- color change → repaint
+</div>
+</li>
+
+<li>
+How do you optimize CSS for large applications?
+<div class="answer">
+- Avoid deep selectors  
+- Use BEM or modular CSS  
+- Minimize unused CSS  
+- Use critical CSS  
+
+Tools: DevTools coverage tab
+</div>
+</li>
+
+<li>
+Explain critical CSS and how you implement it.
+<div class="answer">
+Critical CSS = above-the-fold styles loaded first.
+
+Implementation:
+- Inline critical CSS  
+- Load rest asynchronously  
+
+Improves page load performance.
+</div>
+</li>
+
+<li>
+How does contain property improve performance?
+<div class="answer">
+Limits scope of layout/paint.
+
+Example:
+<pre>
+.container {
+  contain: layout paint;
+}
+</pre>
+
+Prevents unnecessary reflows.
+</div>
+</li>
+
+<li>
+What are compositing layers and why are they important?
+<div class="answer">
+GPU layers improve performance.
+
+Triggered by:
+- transform  
+- opacity  
+
+Example:
+<pre>
+transform: translateZ(0);
+</pre>
+</div>
+</li>
+
+<li>
+Explain how you would build a scalable design system.
+<div class="answer">
+- Use tokens (colors, spacing)  
+- Component-based CSS  
+- Naming conventions (BEM)  
+- Documentation  
+
+Example:
+<pre>
+--primary-color: #4a6cf7;
+</pre>
+</div>
+</li>
+
+<li>
+How would you handle theming (multiple themes)?
+<div class="answer">
+Use CSS variables:
+
+<pre>
+:root {
+  --bg: white;
+}
+.dark {
+  --bg: black;
+}
+</pre>
+</div>
+</li>
+
+<li>
+Why does position: fixed behave differently inside transform?
+<div class="answer">
+Transform creates new containing block.
+
+So fixed becomes relative to that parent instead of viewport.
+</div>
+</li>
+
+<li>
+How do you prevent FOUC (Flash of Unstyled Content)?
+<div class="answer">
+- Load CSS early  
+- Inline critical CSS  
+- Avoid blocking scripts  
+</div>
+</li>
+
+<li>
+What is CSS Houdini (conceptually)?
+<div class="answer">
+Allows developers to extend CSS with custom logic.
+
+Example:
+Custom paint API for drawing backgrounds.
+</div>
+</li>
+
+<li>
+How do you manage CSS in large React/Next.js apps?
+<div class="answer">
+Options:
+- CSS Modules  
+- Styled-components  
+- Tailwind  
+
+Goal: avoid global conflicts.
+</div>
+</li>
+
+<li>
+Explain difference between inline styles and classes in performance.
+<div class="answer">
+Inline styles:
+- Higher specificity  
+- Hard to override  
+
+Classes:
+- Reusable  
+- Better performance for large apps
+</div>
+</li>
+
+<li>
+How would you debug a flexbox issue quickly?
+<div class="answer">
+Use DevTools:
+- Toggle flex overlay  
+- Check flex properties  
+- Inspect parent vs child  
+
+Common issue: missing min-width:0
+</div>
+</li>
+
+<li>
+Why does overflow:hidden break sticky?
+<div class="answer">
+Creates new scroll container → sticky stops referencing viewport.
+</div>
+</li>
+
+<li>
+How to reduce CSS bundle size?
+<div class="answer">
+- Remove unused CSS  
+- Use PurgeCSS  
+- Minify files  
+</div>
+</li>
+
+<li>
+Explain layering strategy in complex UI.
+<div class="answer">
+Use consistent z-index scale:
+
+<pre>
+100 = header  
+1000 = modal  
+</pre>
+
+Avoid random values.
+</div>
+</li>
+
+<li>
+How do you handle cross-browser CSS issues?
+<div class="answer">
+- Use autoprefixer  
+- Test in multiple browsers  
+- Use feature queries  
+
+Example:
+<pre>
+@supports (display: grid) { }
+</pre>
+</div>
+</li>
+
+<li>
+Explain difference between visibility:hidden and pointer-events:none
+<div class="answer">
+visibility:hidden → hidden  
+pointer-events:none → disables interaction only
+</div>
+</li>
+
+<li>
+How do you ensure accessibility in CSS?
+<div class="answer">
+- Good contrast  
+- Focus styles  
+- Avoid motion (prefers-reduced-motion)  
+</div>
+</li>
+
+<li>
+How would you animate height:auto?
+<div class="answer">
+Not directly possible.
+
+Workaround:
+- max-height trick  
+- JS measurement  
+</div>
+</li>
+
+<li>
+Explain CSS architecture methodologies.
+<div class="answer">
+- BEM  
+- SMACSS  
+- ITCSS  
+
+Used for maintainability.
+</div>
+</li>
+
+<li>
+How would you debug random spacing issues in layout?
+<div class="answer">
+- Check margin collapse  
+- Inspect box model  
+- Look for inherited styles  
+</div>
+</li>
+
+</ol>
+</div>
+
 </body>
 </html>
