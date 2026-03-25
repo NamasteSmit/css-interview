@@ -1,139 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CSS Interview Questions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: #f9f9f9;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    .section {
-      margin-top: 30px;
-    }
-    ol {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .subtitle {
-      color: #666;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>CSS Interview Questions - Full Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: #f4f6f8;
+}
+
+h1 {
+  text-align: center;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+li {
+  margin-bottom: 25px;
+}
+
+.answer {
+  background: #ffffff;
+  padding: 12px;
+  margin-top: 8px;
+  border-left: 4px solid #4a6cf7;
+  border-radius: 6px;
+}
+
+code, pre {
+  background: #eee;
+  padding: 5px;
+  display: block;
+  margin-top: 5px;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="header">
-    <h1>CSS Developer Interview Questions</h1>
-    <p class="subtitle">2–3 Years Experience | ~40 Questions</p>
-  </div>
+<h1>CSS Developer Interview Questions</h1>
+<p style="text-align:center;">2–3 Years Experience | Detailed Answers</p>
 
-  <div class="section">
-    <h2>Core Fundamentals</h2>
-    <ol>
-      <li>Explain the CSS Box Model. What is the difference between box-sizing: content-box and border-box?</li>
-      <li>What is the difference between display: none, visibility: hidden, and opacity: 0?</li>
-      <li>How does CSS specificity work? Calculate the specificity of: #nav .item:hover</li>
-      <li>What is the difference between em, rem, vw, vh, and px?</li>
-      <li>What is a stacking context? What properties create a new one?</li>
-      <li>What is the difference between inline, block, and inline-block elements?</li>
-      <li>What does the CSS cascade mean? In what order does it resolve conflicts?</li>
-    </ol>
-  </div>
+<div class="section">
+<h2>Core Fundamentals</h2>
+<ol>
 
-  <div class="section">
-    <h2>Flexbox & Grid</h2>
-    <ol start="8">
-      <li>What is the difference between justify-content and align-items in Flexbox?</li>
-      <li>What does flex: 1 1 auto mean? Explain each value.</li>
-      <li>What is the difference between flex-grow, flex-shrink, and flex-basis?</li>
-      <li>How would you create a responsive 3-column grid that collapses to 1 column on mobile without media queries?</li>
-      <li>What is the difference between auto-fill and auto-fit in CSS Grid?</li>
-      <li>When would you use CSS Grid over Flexbox?</li>
-      <li>What is grid-template-areas and how do you use it?</li>
-      <li>How does align-content differ from align-items in Flexbox?</li>
-    </ol>
-  </div>
+<li>CSS Box Model
+<div class="answer">
+The box model includes content, padding, border, and margin.
 
-  <div class="section">
-    <h2>Positioning</h2>
-    <ol start="16">
-      <li>What is the difference between position: relative, absolute, fixed, and sticky?</li>
-      <li>Why might z-index: 9999 have no effect on an element?</li>
-      <li>What is the difference between transform: translateX(50%) and left: 50%?</li>
-      <li>When does position: sticky stop working and why?</li>
-    </ol>
-  </div>
+content-box → width excludes padding & border  
+border-box → width includes everything (preferred)
 
-  <div class="section">
-    <h2>Responsive Design</h2>
-    <ol start="20">
-      <li>What is the difference between min-width and max-width media queries? Which approach do you prefer?</li>
-      <li>What is the clamp() function? Give a practical example.</li>
-      <li>What are CSS container queries and how are they different from media queries?</li>
-      <li>What is the viewport meta tag and why is it needed?</li>
-      <li>How would you implement a fluid typography system?</li>
-    </ol>
-  </div>
+Example:
+<pre>
+div {
+  width: 200px;
+  padding: 20px;
+  border: 10px solid;
+}
+</pre>
+</div>
+</li>
 
-  <div class="section">
-    <h2>Tricky / Gotchas</h2>
-    <ol start="25">
-      <li>What is margin collapsing? When does it happen and how do you prevent it?</li>
-      <li>Why doesn't vertical-align: middle work on block elements?</li>
-      <li>What is the difference between :nth-child() and :nth-of-type()?</li>
-      <li>Why does a parent element collapse when all its children are floated?</li>
-      <li>Why does text-overflow: ellipsis sometimes not work inside a flex container?</li>
-      <li>A modal has z-index: 9999 but still appears behind other elements. How would you debug this?</li>
-    </ol>
-  </div>
+<li>display vs visibility vs opacity
+<div class="answer">
+display:none removes element from layout.  
+visibility:hidden keeps space but hides it.  
+opacity:0 hides visually but element is still interactive.
+</div>
+</li>
 
-  <div class="section">
-    <h2>Modern CSS</h2>
-    <ol start="31">
-      <li>How do CSS custom properties (variables) differ from SASS variables?</li>
-      <li>What is the :is() pseudo-class? How does it affect specificity?</li>
-      <li>What is the difference between :is() and :where()?</li>
-      <li>What are CSS cascade layers (@layer) and why were they introduced?</li>
-      <li>What are logical properties in CSS (e.g. margin-inline, padding-block)?</li>
-      <li>What does the aspect-ratio property do? How was this handled before it existed?</li>
-    </ol>
-  </div>
+<li>Specificity
+<div class="answer">
+Order: Inline > ID > Class > Element  
+#nav .item:hover = (1,2,0)
+</div>
+</li>
 
-  <div class="section">
-    <h2>Animations & Performance</h2>
-    <ol start="37">
-      <li>Which CSS properties are cheap to animate and which are expensive? Why?</li>
-      <li>What is the difference between transition and animation in CSS?</li>
-      <li>What does will-change do and what are the risks of overusing it?</li>
-      <li>What is the contain property and how can it improve rendering performance?</li>
-    </ol>
-  </div>
+<li>Units
+<div class="answer">
+px fixed, em parent-based, rem root-based, vw/vh viewport-based.
+</div>
+</li>
 
-  <div class="section">
-    <h2>Scenario Based</h2>
-    <ol start="41">
-      <li>SCENARIO: How would you implement a dark mode that respects both system preference and a manual user toggle?</li>
-      <li>SCENARIO: A sticky header stops working on some pages. What would you investigate?</li>
-      <li>SCENARIO: You need a responsive image gallery — 4 cols on desktop, 2 on tablet, 1 on mobile — with images maintaining aspect ratio. How do you build it?</li>
-      <li>SCENARIO: A designer gives you a card with text that must show ellipsis but it's not working inside a flex container. What's the fix?</li>
-      <li>SCENARIO: You are building a design system. How would you structure your CSS for scalability?</li>
-      <li>SCENARIO: An animation is causing jank/lag on lower-end devices. How would you diagnose and fix it?</li>
-    </ol>
-  </div>
+<li>Stacking Context
+<div class="answer">
+Controls layering. Created by position + z-index, transform, opacity, etc.
+</div>
+</li>
+
+<li>inline vs block vs inline-block
+<div class="answer">
+inline → no width/height  
+block → full width  
+inline-block → supports size but inline behavior
+</div>
+</li>
+
+<li>CSS Cascade
+<div class="answer">
+Priority: !important > specificity > source order.
+</div>
+</li>
+
+</ol>
+</div>
+
+<div class="section">
+<h2>Flexbox & Grid</h2>
+<ol start="8">
+
+<li>justify-content vs align-items
+<div class="answer">
+justify-content controls main axis, align-items controls cross axis.
+</div>
+</li>
+
+<li>flex:1 1 auto
+<div class="answer">
+grow = 1, shrink = 1, basis = auto.
+</div>
+</li>
+
+<li>flex properties
+<div class="answer">
+grow expands, shrink reduces, basis defines initial size.
+</div>
+</li>
+
+<li>Responsive grid
+<div class="answer">
+<pre>
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+</pre>
+</div>
+</li>
+
+<li>auto-fill vs auto-fit
+<div class="answer">
+auto-fill keeps empty tracks, auto-fit collapses them.
+</div>
+</li>
+
+<li>Grid vs Flexbox
+<div class="answer">
+Grid is 2D, Flexbox is 1D.
+</div>
+</li>
+
+<li>grid-template-areas
+<div class="answer">
+Defines layout using names.
+
+<pre>
+grid-template-areas:
+"header header"
+"sidebar main";
+</pre>
+</div>
+</li>
+
+<li>align-content vs align-items
+<div class="answer">
+align-items → individual items  
+align-content → entire grid/flex lines
+</div>
+</li>
+
+</ol>
+</div>
+
+<div class="section">
+<h2>Positioning</h2>
+<ol start="16">
+
+<li>position types
+<div class="answer">
+relative, absolute, fixed, sticky.
+
+sticky example:
+<pre>
+position: sticky;
+top: 0;
+</pre>
+</div>
+</li>
+
+<li>z-index issue
+<div class="answer">
+Requires positioned element. Also affected by stacking context.
+</div>
+</li>
+
+<li>translate vs left
+<div class="answer">
+transform is GPU accelerated (better performance), left causes reflow.
+</div>
+</li>
+
+<li>sticky not working
+<div class="answer">
+Fails if parent has overflow hidden or no scroll space.
+</div>
+</li>
+
+</ol>
+</div>
+
+<div class="section">
+<h2>Responsive Design</h2>
+<ol start="20">
+
+<li>min-width vs max-width
+<div class="answer">
+min-width → mobile-first (recommended).  
+max-width → desktop-first.
+</div>
+</li>
+
+<li>clamp()
+<div class="answer">
+<pre>
+font-size: clamp(16px, 2vw, 24px);
+</pre>
+Responsive sizing without media queries.
+</div>
+</li>
+
+<li>Container queries
+<div class="answer">
+Respond to parent size instead of viewport.
+</div>
+</li>
+
+<li>viewport meta
+<div class="answer">
+Ensures proper scaling on mobile devices.
+</div>
+</li>
+
+<li>Fluid typography
+<div class="answer">
+Use clamp() or vw-based sizing.
+</div>
+</li>
+
+</ol>
+</div>
+
+<div class="section">
+<h2>Tricky</h2>
+<ol start="25">
+
+<li>Margin collapsing
+<div class="answer">
+Vertical margins merge. Fix with padding or overflow.
+</div>
+</li>
+
+<li>vertical-align
+<div class="answer">
+Works only on inline/table elements.
+</div>
+</li>
+
+<li>nth-child vs nth-of-type
+<div class="answer">
+nth-child counts all elements, nth-of-type counts specific type.
+</div>
+</li>
+
+<li>Float collapse
+<div class="answer">
+Parent collapses because floats are removed from normal flow. Fix with clearfix or overflow.
+</div>
+</li>
+
+<li>ellipsis not working
+<div class="answer">
+Needs:
+<pre>
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+min-width: 0;
+</pre>
+</div>
+</li>
+
+<li>Modal behind elements
+<div class="answer">
+Check stacking context and parent transforms.
+</div>
+</li>
+
+</ol>
+</div>
+
+<div class="section">
+<h2>Modern CSS</h2>
+<ol start="31">
+
+<li>CSS vs SASS variables
+<div class="answer">
+CSS variables are dynamic, SASS variables are compile-time.
+</div>
+</li>
+
+<li>:is()
+<div class="answer">
+Simplifies selectors while keeping specificity.
+</div>
+</li>
+
+<li>:is() vs :where()
+<div class="answer">
+:is keeps specificity, :where removes it.
+</div>
+</li>
+
+<li>@layer
+<div class="answer">
+Controls cascade order.
+</div>
+</li>
+
+<li>Logical properties
+<div class="answer">
+margin-inline replaces left/right (RTL friendly).
+</div>
+</li>
+
+<li>aspect-ratio
+<div class="answer">
+Maintains element ratio. Previously done using padding hack.
+</div>
+</li>
+
+</ol>
+</div>
+
+<div class="section">
+<h2>Performance</h2>
+<ol start="37">
+
+<li>Cheap vs expensive animations
+<div class="answer">
+Cheap → transform, opacity  
+Expensive → width, height, top
+</div>
+</li>
+
+<li>transition vs animation
+<div class="answer">
+transition = state change  
+animation = keyframes
+</div>
+</li>
+
+<li>will-change
+<div class="answer">
+Optimizes rendering but overuse increases memory usage.
+</div>
+</li>
+
+<li>contain
+<div class="answer">
+Limits layout/paint scope → improves performance.
+</div>
+</li>
+
+</ol>
+</div>
+
+<div class="section">
+<h2>Scenario Based</h2>
+<ol start="41">
+
+<li>Dark mode
+<div class="answer">
+Use prefers-color-scheme + manual toggle.
+</div>
+</li>
+
+<li>Sticky debug
+<div class="answer">
+Check overflow, parent height, scroll container.
+</div>
+</li>
+
+<li>Responsive gallery
+<div class="answer">
+Use grid with auto-fit and minmax.
+</div>
+</li>
+
+<li>Ellipsis issue
+<div class="answer">
+Add min-width:0 in flex container.
+</div>
+</li>
+
+<li>Design system
+<div class="answer">
+Use modular CSS, variables, naming conventions like BEM.
+</div>
+</li>
+
+<li>Animation lag
+<div class="answer">
+Use transform, reduce reflow, optimize repaint.
+</div>
+</li>
+
+</ol>
+</div>
 
 </body>
 </html>
