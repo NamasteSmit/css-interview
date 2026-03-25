@@ -1,0 +1,56 @@
+CSS Developer Interview Questions
+2–3 Years Experience  |  ~40 Questions
+Core Fundamentals
+1.  Explain the CSS Box Model. What is the difference between box-sizing: content-box and border-box?
+2.  What is the difference between display: none, visibility: hidden, and opacity: 0?
+3.  How does CSS specificity work? Calculate the specificity of: #nav .item:hover
+4.  What is the difference between em, rem, vw, vh, and px?
+5.  What is a stacking context? What properties create a new one?
+6.  What is the difference between inline, block, and inline-block elements?
+7.  What does the CSS cascade mean? In what order does it resolve conflicts?
+Flexbox & Grid
+8.  What is the difference between justify-content and align-items in Flexbox?
+9.  What does flex: 1 1 auto mean? Explain each value.
+10.  What is the difference between flex-grow, flex-shrink, and flex-basis?
+11.  How would you create a responsive 3-column grid that collapses to 1 column on mobile without media queries?
+12.  What is the difference between auto-fill and auto-fit in CSS Grid?
+13.  When would you use CSS Grid over Flexbox?
+14.  What is grid-template-areas and how do you use it?
+15.  How does align-content differ from align-items in Flexbox?
+Positioning
+16.  What is the difference between position: relative, absolute, fixed, and sticky?
+17.  Why might z-index: 9999 have no effect on an element?
+18.  What is the difference between transform: translateX(50%) and left: 50%?
+19.  When does position: sticky stop working and why?
+Responsive Design
+20.  What is the difference between min-width and max-width media queries? Which approach do you prefer?
+21.  What is the clamp() function? Give a practical example.
+22.  What are CSS container queries and how are they different from media queries?
+23.  What is the viewport meta tag and why is it needed?
+24.  How would you implement a fluid typography system?
+Tricky / Gotchas
+25.  What is margin collapsing? When does it happen and how do you prevent it?
+26.  Why doesn't vertical-align: middle work on block elements?
+27.  What is the difference between :nth-child() and :nth-of-type()?
+28.  Why does a parent element collapse when all its children are floated?
+29.  Why does text-overflow: ellipsis sometimes not work inside a flex container?
+30.  A modal has z-index: 9999 but still appears behind other elements. How would you debug this?
+Modern CSS
+31.  How do CSS custom properties (variables) differ from SASS variables?
+32.  What is the :is() pseudo-class? How does it affect specificity?
+33.  What is the difference between :is() and :where()?
+34.  What are CSS cascade layers (@layer) and why were they introduced?
+35.  What are logical properties in CSS (e.g. margin-inline, padding-block)?
+36.  What does the aspect-ratio property do? How was this handled before it existed?
+Animations & Performance
+37.  Which CSS properties are cheap to animate and which are expensive? Why?
+38.  What is the difference between transition and animation in CSS?
+39.  What does will-change do and what are the risks of overusing it?
+40.  What is the contain property and how can it improve rendering performance?
+Scenario Based
+41.  SCENARIO: How would you implement a dark mode that respects both system preference and a manual user toggle?
+42.  SCENARIO: A sticky header stops working on some pages. What would you investigate?
+43.  SCENARIO: You need a responsive image gallery — 4 cols on desktop, 2 on tablet, 1 on mobile — with images maintaining aspect ratio. How do you build it?
+44.  SCENARIO: A designer gives you a card with text that must show ellipsis but it's not working inside a flex container. What's the fix?
+45.  SCENARIO: You are building a design system. How would you structure your CSS for scalability?
+46.  SCENARIO: An animation is causing jank/lag on lower-end devices. How would you diagnose and fix it?
